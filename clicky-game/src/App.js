@@ -1,29 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Card from "./components/Card";
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
 import Score from "./components/Score";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+export default class App extends Component {
+  state = {
+    friends: friends,
+  };
 
-export default App;
+  removeFriend = (id) => {
+    console.log(id);
+    const tempFriends = this.state.friends.filter((f) => f.id !== id);
+    this.setState({ friends: tempFriends });
+  };
+
+  render() {
+    return (
+      <Wrapper>
+        <h1 className="title">Friends List</h1>
+        {this.state.friends.map((friend) => (
+          <FriendCard
+            removeFriend={this.removeFriend}
+            id={friend.id}
+            name={friend.name}
+            image={friend.image}
+            occupation={friend.occupation}
+            location={friend.location}
+            key={friend.id}
+          />
+        ))}
+      </Wrapper>
+    );
+  }
+}
