@@ -1,6 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Card from "./components/Card";
+import Wrapper from "./components/Wrapper";
+import Score from "./components/Score";
 
 function App() {
   return (
