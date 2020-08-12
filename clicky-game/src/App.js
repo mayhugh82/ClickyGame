@@ -1,10 +1,8 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import React, { Component } from "react";
 import Card from "./components/Card";
 import Wrapper from "./components/Wrapper";
 import Score from "./components/Score";
-import ppg from "./friends.json";
+import ppg from "./cards.json";
 import "./App.css";
 
 class App extends Component {
