@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import FriendCard from "./components/FriendCard";
+import FriendCard from "./components/Card";
 import Wrapper from "./components/Wrapper";
 import Score from "./components/Score";
 
