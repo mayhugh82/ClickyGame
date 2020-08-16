@@ -58,17 +58,17 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">The Clickster</h1>
+          <h1 className="App-title">Power Puff Girl Clicky Game!</h1>
           <p className="App-intro">Try not to click the same image twice!</p>
         </header>
         <Score total={this.state.score} goal={8} status={this.state.status} />
         <Wrapper>
-          {this.state.ppg.map((puppy) => (
+          {this.state.ppg.map((characters) => (
             <Card
               shuffleScoreCard={this.shuffleScoreCard}
-              id={puppy.id}
-              key={puppy.id}
-              image={puppy.image}
+              id={characters.id}
+              key={characters.id}
+              image={characters.image}
             />
           ))}
         </Wrapper>
