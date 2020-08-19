@@ -10,7 +10,7 @@ Pay attention and good luck!
 
 [Github](https://github.com/mayhugh82/ClickyGame)
 
-[Heroku](https://newsscraper-npr.herokuapp.com/)
+[Heroku](https://power-puff-clicky-game.herokuapp.com/)
 
 ## Technologies Used
 * React.js - UI
